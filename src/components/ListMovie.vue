@@ -19,7 +19,7 @@
         <p class="card-text">Popularity : {{i.popularity}}</p>
         <div class="row">
             <div class="col">
-                <a href="#" class="btn btn-primary">Go Detail</a>
+              <router-link :to="'/detail-movie/' + i.id" type="button" class="btn btn-outline-primary btn-sm" v-on:click="updateUser(i.id)" >Go Detail </router-link>
             </div>
             <div class="col">
                 Vote {{i.vote_average}}
