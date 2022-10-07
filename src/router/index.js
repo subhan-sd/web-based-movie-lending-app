@@ -7,12 +7,12 @@ const routes = [
         component: () => import('../components/ListMovie.vue') 
     },
     {
-        path: '/detail-movie',
+        path: '/detail-movie/:id',
         name: 'detail-movie',
         component: () => import('../components/DetailMovie.vue') 
     },
     {
-        path: '/AddMovie',
+        path: '/AddMovie/:id',
         name: 'AddMovie',
         component: () => import('../components/AddMovie.vue')
     },
@@ -20,7 +20,12 @@ const routes = [
         path: '/edit/:id',
         name: 'edit-movie',
         component: () => import('../components/EditMovie.vue')
-    }
+    },
+    {
+        path: '/daftar-pinjam',
+        name: 'daftar-pinjam',
+        component: () => import('../components/DaftarPinjam.vue') 
+    },
 ]
 const router = createRouter({
     history: createWebHistory(),
